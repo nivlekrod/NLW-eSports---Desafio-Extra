@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(./assets/bg-stars.jpg);
+    background-size: 100% auto;
+    background-position: top center;
+    
+    word-break: break-all;
+}
+
+body * {
+    font-family: 'Silkscreen', sans-serif;
+    line-height: 160%;
+}
+
+header {
+    color: white;
+    max-width: 580px;
+    margin: auto;
+    width: 90%;
+    display: grid;
+
+    height: calc(120px + 32px + 24px);
+    margin-top: 32px;
+}
+
+header .profile {
+    max-width: 120px;
+    margin: auto;
+    display: grid;
+    padding: 4px;
+    
+    transition: transform .3s;
+}
+
+header .profile:hover {
+    transform: scale(1.1);
+}
+
+header .name {
+    max-width: 580px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+header h2 {
+    max-width: 580px;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 4px;
+    background-image: linear-gradient(90deg, #017230 0%, #3044c8 50%, #E2D45C 100%);
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: rgb(255, 204, 0);
+    background-image: linear-gradient(90deg, #017230 0%, #3044c8 50%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #212025;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+section p {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    color: #b38d1b;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+.movies-list img {
+    width: 100px;
+    border-radius: 8px;
+}
+
+.series-list img {
+    width: 100px;
+    border-radius: 8px;
+}
+
+.animes-list img {
+    width: 100px;
+    border-radius: 8px;
+}
+
+/*animations*/
+
+header .profile {
+    animation: fromTop .7s 1s backwards;
+}
+
+header .name {
+    animation: fromBottom .7s 1s backwards;
+}
+
+@keyframes fromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section:nth-child(1) {
+    animation: fromLeft .7s 1.3s backwards;
+}
+
+main section:nth-child(2) {
+    animation: fromRight .7s 1.6s backwards;
+}
+
+main section:nth-child(3) {
+    animation: fromLeft .7s 1.9s backwards;
+}
+
+main section:nth-child(4) {
+    animation: fromRight .7s 1.9s backwards;
+}
+
+@keyframes fromRight {
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromLeft {
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
